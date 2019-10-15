@@ -34,6 +34,7 @@ def prepro(hp):
 
     logging.info("# Preprocessing")
     # train
+    #lambda：匿名函数，x是参数，直接返回函数值
     _prepro = lambda x:  [line.strip() for line in open(x, 'r').read().split("\n") \
                       if not line.startswith("<")]
     prepro_train1, prepro_train2 = _prepro(train1), _prepro(train2)
